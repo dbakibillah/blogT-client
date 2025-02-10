@@ -57,9 +57,9 @@ const AddBlogPage = () => {
     };
 
     return (
-        <section className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 p-2">
-            <div className="max-w-4xl w-full bg-white dark:bg-gray-800 rounded-lg shadow-lg p-5 md:p-8">
-                <h1 className="text-3xl font-bold text-center mb-6 text-gray-800 dark:text-white">
+        <section className="flex justify-center items-center min-h-screen bg-gray-50 dark:bg-gray-900 p-4">
+            <div className="max-w-3xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-10">
+                <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
                     Add New Blog
                 </h1>
                 <form onSubmit={handleSubmit} className="space-y-6">
