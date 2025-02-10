@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Table, kaReducer } from "ka-table";
 import { DataType, SortingMode } from "ka-table/enums";
 import "ka-table/style.css";
 
@@ -64,14 +63,38 @@ const FeaturedBlogs = () => {
                     Featured Blogs
                 </h1>
                 <div className="overflow-x-auto">
-                    <Table
-                        {...tableProps}
-                        dispatch={(action) => {
-                            const newState = kaReducer(tableProps, action);
-                            setTableProps(newState);
-                        }}
-                        className="w-full border border-gray-300 dark:border-gray-700 rounded-lg shadow-md bg-white dark:bg-gray-800 dark:text-gray-300"
-                    />
+                    <table className="w-full border-collapse border border-gray-300 dark:border-gray-700 rounded-lg">
+                        <thead className="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200">
+                            <tr>
+                                {tableProps.columns.map((col) => (
+                                    <th
+                                        key={col.key}
+                                        className="p-4 border border-gray-300 dark:border-gray-600 font-semibold text-center"
+                                    >
+                                        {col.title}
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {tableProps.data.map((row) => (
+                                <tr
+                                    key={row.index}
+                                    className="hover:bg-gray-100 dark:hover:bg-gray-600 transition-all"
+                                >
+                                    {tableProps.columns.map((col) => (
+                                        <td
+                                            key={col.key}
+                                            className="p-4 border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-gray-300"
+                                            style={col.style}
+                                        >
+                                            {row[col.key]}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
