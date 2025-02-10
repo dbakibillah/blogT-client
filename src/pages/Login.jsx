@@ -95,7 +95,7 @@ const Login = () => {
                             name="email"
                             type="email"
                             placeholder="Email"
-                            className="input input-bordered"
+                            className="input input-bordered dark:bg-gray-700 dark:text-gray-100"
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
@@ -110,7 +110,7 @@ const Login = () => {
                                 name="password"
                                 type={showPassword ? "text" : "password"}
                                 placeholder="Password"
-                                className="input input-bordered w-full"
+                                className="input input-bordered w-full dark:bg-gray-700 dark:text-gray-100"
                                 required
                             />
                             <span
