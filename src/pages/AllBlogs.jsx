@@ -121,7 +121,7 @@ const AllBlogs = () => {
                 <PhotoProvider>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                         {loading
-                            ? Array.from({ length: 6 }).map((_, idx) => (
+                            ? Array.from({ length: 8 }).map((_, idx) => (
                                 <div key={idx}>{renderSkeleton()}</div>
                             ))
                             : blogs.length > 0
