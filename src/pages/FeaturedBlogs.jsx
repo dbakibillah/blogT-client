@@ -12,12 +12,13 @@ const FeaturedBlogs = () => {
                 key: "index",
                 title: "#",
                 dataType: DataType.Number,
-                style: { width: "50px" },
+                style: { width: "50px", textAlign: "center" },
             },
             {
                 key: "title",
                 title: "Title",
                 dataType: DataType.String,
+                style: { fontWeight: "bold" },
             },
             {
                 key: "author",
@@ -28,11 +29,13 @@ const FeaturedBlogs = () => {
                 key: "category",
                 title: "Category",
                 dataType: DataType.String,
+                style: { fontStyle: "italic" },
             },
             {
                 key: "wordCount",
                 title: "Word Count",
                 dataType: DataType.Number,
+                style: { textAlign: "right" },
             },
         ],
         data: [],
@@ -55,17 +58,21 @@ const FeaturedBlogs = () => {
     }, []);
 
     return (
-        <section className="bg-gray-100 dark:bg-gray-900">
-            <div className="container mx-auto p-4 dark:bg-gray-900 dark:text-gray-200">
-                <h1 className="text-2xl font-bold mb-4">Featured Blogs</h1>
-                <Table
-                    {...tableProps}
-                    dispatch={(action) => {
-                        const newState = kaReducer(tableProps, action);
-                        setTableProps(newState);
-                    }}
-                    className="rounded-lg shadow-lg bg-white dark:bg-gray-800 dark:text-gray-200"
-                />
+        <section className="bg-gray-100 dark:bg-gray-900 py-10">
+            <div className="container mx-auto p-6 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
+                <h1 className="text-3xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+                    Featured Blogs
+                </h1>
+                <div className="overflow-x-auto">
+                    <Table
+                        {...tableProps}
+                        dispatch={(action) => {
+                            const newState = kaReducer(tableProps, action);
+                            setTableProps(newState);
+                        }}
+                        className="w-full border border-gray-300 dark:border-gray-700 rounded-lg shadow-md bg-white dark:bg-gray-800 dark:text-gray-300"
+                    />
+                </div>
             </div>
         </section>
     );

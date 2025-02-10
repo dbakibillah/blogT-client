@@ -110,7 +110,7 @@ const Navbar = () => {
                                 </label>
                                 <ul
                                     tabIndex={0}
-                                    className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow z-10"
+                                    className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow z-10 dark:bg-gray-900"
                                 >
                                     <li>
                                         <span className="font-bold">
@@ -120,7 +120,7 @@ const Navbar = () => {
                                     <li>
                                         <button
                                             onClick={handleLogout}
-                                            className="btn btn-ghost"
+                                            className="btn btn-ghost dark:bg-gray-800 dark:hover:bg-gray-700"
                                         >
                                             Log Out
                                         </button>
@@ -138,11 +138,11 @@ const Navbar = () => {
                             </span>
                         )}
 
-                        {
+                        {/* {
                             user && (<div>
                                 <button onClick={handleLogout} className="btn btn-ghost">Log Out</button>
                             </div>)
-                        }
+                        } */}
                         <div>
                             <button onClick={handleToggleDarkMode} className="btn btn-ghost btn-circle btn-sm">
                                 {
