@@ -87,8 +87,8 @@ const AllBlogs = () => {
 
     return (
         <section className="bg-gray-100 dark:bg-gray-900">
-            <section className="container mx-auto p-4 lg:p-24 dark:bg-gray-900">
-                <div className="mb-6 flex items-center justify-end gap-4 p-4">
+            <section className="container mx-auto px-4 lg:p-24 dark:bg-gray-900">
+                <div className="mb-6 flex items-center justify-end gap-4 px-4">
                     <div className="relative w-full max-w-xs">
                         <input
                             type="text"
