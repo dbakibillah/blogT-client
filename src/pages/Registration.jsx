@@ -137,7 +137,7 @@ const Registration = () => {
                             type="text"
                             name="name"
                             placeholder="Name"
-                            className="input input-bordered dark:text-gray-950"
+                            className="input input-bordered dark:bg-gray-700 dark:text-gray-100"
                             required
                         />
                     </div>
@@ -150,7 +150,7 @@ const Registration = () => {
                             type="email"
                             name="email"
                             placeholder="email"
-                            className="input input-bordered dark:text-gray-950"
+                            className="input input-bordered dark:bg-gray-700 dark:text-gray-100"
                             required
                         />
                     </div>
@@ -163,7 +163,7 @@ const Registration = () => {
                             type="text"
                             name="photo"
                             placeholder="Photo URL"
-                            className="input input-bordered dark:text-gray-950"
+                            className="input input-bordered dark:bg-gray-700 dark:text-gray-100"
                             required
                         />
                     </div>
@@ -177,7 +177,7 @@ const Registration = () => {
                                 type={showPassword ? "text" : "password"}
                                 name="password"
                                 placeholder="Password"
-                                className="input input-bordered w-full dark:text-gray-950"
+                                className="input input-bordered w-full dark:bg-gray-700 dark:text-gray-100"
                                 required
                             />
                             <span
